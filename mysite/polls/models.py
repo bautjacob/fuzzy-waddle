@@ -20,6 +20,6 @@ class Choice(models.Model):
         return self.choice_text
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['question', 'choice_text'], name='unique_choice_text_constraint'),
+            models.UniqueConstraint(fields=['question', 'choice_text'], name='unique_choice_text_per_question_constraint'),
         ]
     
